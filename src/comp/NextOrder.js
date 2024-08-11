@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import './NextOrder.css'
-function NextOrder() {
+function NextOrder({AddtoCart}) {
     const [first, setfirst] = useState()
     useEffect(() => {
 axios.get("https://fakestoreapi.com/products?limit=15")
@@ -13,7 +13,7 @@ axios.get("https://fakestoreapi.com/products?limit=15")
     
   return (
     <div className='grid'>
-        {first && first.map((e)=><Card ele={e} />)}
+        {first && first.map((e)=><Card ele={e} AddtoCart={AddtoCart} />)}
     </div>
   )
 }

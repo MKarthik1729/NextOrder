@@ -1,7 +1,6 @@
 import React from 'react'
 
-function Card({ele}) {
-    console.log(ele)
+function Card({ele,AddtoCart}) {
   return (
     <div className='card'>
         <img src={ele.image} />
@@ -9,7 +8,7 @@ function Card({ele}) {
         <p className='content'>{ele.description}</p>
         <div className='flex'>
         <p>₹{ele.price*80}</p>
-        <p>Add to Cart</p>
+        <p onClick={()=>AddtoCart(ele)}>Add to Cart</p>
         </div>
     </div>
   )
