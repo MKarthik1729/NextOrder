@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Cart.css';
-
+import { TiDelete } from "react-icons/ti";
 function Cart({ data,RemoveFromCart }) {
   const [quantities, setQuantities] = useState(
     data.map(() => 1) // Initialize each item's quantity to 1
@@ -21,13 +21,13 @@ function Cart({ data,RemoveFromCart }) {
   return (
     <div>
       <h2>Cart</h2>
-      <table border={1}>
+      <table border={1} style={{width:"80%",margin:"40px 10%"}}>
         <thead>
           <tr>
             <th>Image</th>
             <th>Title</th>
             <th>Cost per piece</th>
-            <th>No of Pieces</th>
+            <th>No of Pieces</th> 
             <th>Total cost</th>
             <th>Remove</th>
           </tr>
@@ -47,7 +47,7 @@ function Cart({ data,RemoveFromCart }) {
                 />
               </td>
               <td>{val.price * 80 * quantities[key]}</td>
-              <td onClick={()=>RemoveFromCart(val.id)}>Delete</td>
+              <td onClick={()=>RemoveFromCart(val.id)}><TiDelete size={"3em"} className='del' /></td>
             </tr>
           ))}
         </tbody>

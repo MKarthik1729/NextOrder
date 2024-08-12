@@ -1,0 +1,21 @@
+.buy{
+    padding: 12px 50px;
+    border-radius: 20px;
+    background-color: lightgreen;
+}
+
+.buy:hover{
+    background-color: green;
+}
+
+.icon-data{
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.icon-data:hover{
+    background-color:rgb(9, 201, 201);
+
+}
+
