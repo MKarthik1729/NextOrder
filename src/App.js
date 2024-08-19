@@ -8,7 +8,12 @@ import Cart from './comp/Cart';
 function App() {
   const [cart,setCart] = useState([])
   const AddtoCart = (e)=>{
-    setCart([...cart,e])
+    if (!cart.includes(e)) {
+    setCart([...cart,e]) 
+    }
+    else{
+      alert("already added")
+    }
   }
   const RemoveFromCart=(Eid)=>{
     setCart(cart.filter(item => item.id !== Eid));

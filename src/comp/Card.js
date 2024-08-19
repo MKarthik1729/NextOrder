@@ -11,13 +11,12 @@ function Card({ele,AddtoCart}) {
         <h2 className='h1-size'>{ele.title}</h2>
         <p className='content'>{ele.description}</p>
         <div className='flex'>
-        <p>₹{ele.price*80}</p>
+        <p className='amount textlsize'>₹{ele.price*80}</p>
         <p className='icon-data'><CiHeart size='2em'/></p>
         <p onClick={()=>AddtoCart(ele)} className='icon-data'><IoCartOutline size='2em'/></p>
-        <p className='buy'>Buy</p>
+        <p className='buy textlsize'>Buy</p>
         </div>
     </div>
-  )
-}
+  )}
 
 export default Card
